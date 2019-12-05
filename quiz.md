@@ -1,5 +1,13 @@
 # Quiz
 
+## 12/05
+
+1. employees表からdeptnoが30でsalが30万以上のデータを取得するSQL?
+1. employees表からcommにデータが入っているデータを取得するSQL?
+1. products表からpnameが'100%'から始まるデータを取得するSQL?
+1. employees表らsalの多い順にソートしたデータを取得するSQL?
+1. employees表らsalの多いトップ3を取得するSQL?
+
 ## 12/04
 
 1. 「射影」について説明してください
