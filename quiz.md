@@ -1,5 +1,16 @@
 # Quiz
 
+## 12/10
+
+1. employees表からyomiの「先頭文字を大文字、それ以外を小文字」で表示  
+するSQL?
+1. employees表からyomiを10文字で表示し、足りない場合は左側に「*」で  
+埋めるSQL?
+1. employees表からenameの前後のスペースを取り除いて表示するSQL?
+1. employees表からsalの10000未満(1000の位を四捨五入)して表示するSQL?
+1. employees表からhiredateから最初の日曜日の日付を表示するSQL?
+
+
 ## 12/05
 
 1. employees表からdeptnoが30でsalが30万以上のデータを取得するSQL?
