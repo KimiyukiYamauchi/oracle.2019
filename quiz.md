@@ -1,5 +1,26 @@
 # Quiz
 
+## 12/11
+
+1. employee表からhiredateを以下の文字書式で表示するSQL?  
+なお英語環境でOracleサーバを使用している  
+Twenty-Sixth of May,2014
+1. employee表からsalを以下の文字書式で表示するSQL?  
+なお日本語環境でOracleサーバを使用している  
+また100万以上のsalのデータはない  
+￥500,000
+1. 以下の形式の日付を表す文字列を日付値に変換し表示するSQL?  
+なお日本語環境でOracleサーバを使用している  
+「2019年12月11日」
+1. 本日、以下のSQL文を実行した時の表示?  
+select to_char(to_date('07-26-95, 'MM-DD-RR'), 'YYYY-MM-DD'),  
+select to_char(to_date('07-26-45, 'MM-DD-RR'), 'YYYY-MM-DD')  
+from dual;
+1. employee表のsalが以下の条件の処理後、表示を行うSQL?  
+  - 23万以下なら1.5倍
+  - 38万以下なら1.2倍
+  - それ以外は1.1倍
+
 ## 12/10
 
 1. employees表からyomiの「先頭文字を大文字、それ以外を小文字」で表示  
