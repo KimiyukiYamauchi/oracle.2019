@@ -1,5 +1,30 @@
 # Quiz
 
+## 12/12
+
+1. employee表からsal列の値がnullの場合は0とみなし、deptnoごとの平均を  
+求める。集計結果のなかで、平均給与が20万未満のdeptnoを表示するSQL?
+1. 以下のSQL文のOKですか?NGの場合は修正箇所を説明してください  
+select deptno, job, count(*) from employees  
+where count(*) >= 2  
+group by deptno, job  
+order by deptno, job;
+1. 以下のSQL文のOKですか?NGの場合は修正箇所を説明してください  
+select prod_category, sum(prod_list_price)  
+from produccts  
+group by prod_category  
+having min(prod_list_price) > 10;
+1. products表のPRICE列に以下のデータが入っいる  
+200, 200, 300, null, 400  
+以下のSQLの結果は?  
+select avg(sal), avg(distinct sal), avg(nvl(sal, 0))  
+from products;  
+1. 以下のSQL文のOKですか?NGの場合は修正箇所を説明してください  
+select depno 部門番号, avg(sal) 平均給与 from employees  
+goup by deptno  
+order by min(sal) desc; 
+
+
 ## 12/11
 
 1. employee表からhiredateを以下の文字書式で表示するSQL?  
