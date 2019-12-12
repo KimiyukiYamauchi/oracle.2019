@@ -6,7 +6,7 @@
 求める。集計結果のなかで、平均給与が20万未満のdeptnoを表示するSQL?
 1. 以下のSQL文はOKですか?NGの場合は修正箇所を説明してください  
 select deptno, job, count(*) from employees  
-where count(*) >= 2  
+where count(\*) >= 2  
 group by deptno, job  
 order by deptno, job;
 1. 以下のSQL文はOKですか?NGの場合は修正箇所を説明してください  
