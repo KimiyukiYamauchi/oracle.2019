@@ -5,8 +5,8 @@
 1. test表のtest列の前後の"(ダブルクォート)を削除するSQL?
 1. employee表からsal列の降順でソートしたデータの3番目から3件データを  
 表示するSQL?
-1. employee表からデータを取り出す時、SQL実行時にdeptnoをユーザに指定  
-させるSQL?
+1. employee表からデータを取り出す時、SQL実行時に選択条件のdeptnoを  
+ユーザに指定させるSQL?
 1. 2020年7月の最初の日曜日を表示するSQL?
 1. 以下のSQL文はエラーになります。修正してください  
 select round('19-06-30', 'YEAR') from dual;
