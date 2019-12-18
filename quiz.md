@@ -1,5 +1,26 @@
 # Quiz
 
+## 12/18
+
+1. 以下のSQL文はOKですか?NGの場合は修正してください  
+select sysdate - '00-01-01' from dual;
+1. 以下のSQL文はOKですか?NGの場合は修正してください  
+select ename, hiredate  
+from employees  
+where hiredate >= to_date('2003-01-01', 'RR-MON-DD',  
+'nls_date_language = AMERICAN');
+1. 以下のSQL文はOKですか?NGの場合は修正してください  
+select e.empno, e.ename, d.dname, e.deptno  
+from employees e, departments d; 
+1. 以下のSQL文はOKですか?NGの場合は修正してください  
+select e.empno, e.ename, d.deptno, d.dname  
+from employees e natural join departments d;
+1. 以下のSQL文はOKですか?NGの場合は修正してください  
+select e.empno, e.ename, d.dname  
+from employees e join departments d  
+on e.deptno = d.deptno  
+where deptno in (10, 20);
+
 ## 12/17
 
 1. test表のtest列の前後の"(ダブルクォート)を削除するSQL?
