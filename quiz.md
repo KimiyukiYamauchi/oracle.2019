@@ -26,7 +26,7 @@ where e.deptno = d.deptno;
 だれも配属されていない部門も表示する外部結合を行う以下のSQL文はOKですか?  
 NGの場合は修正してください  
 select e.empno, e.ename, d.deptno, d.dname  
-from employees e, depatments d  
+from employees e, departments d  
 where e.deptno(+) = d.deptno(+);
 
 ## 12/18
