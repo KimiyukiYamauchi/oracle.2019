@@ -1,5 +1,34 @@
 # Quiz
 
+## 12/19
+
+1. mgr列がnullの行を含めて表示する外部結合を行う以下のSQL文はOKですか?  
+NGの場合は修正してください  
+select w.ename, w.sal, m.ename  
+from employees w join employees m  
+on w.mgr = m.empno;
+1. mgr列がnullの行を含めて表示する外部結合を行う以下のSQL文はOKですか?  
+NGの場合は修正してください  
+select w.ename, w.sal, m.ename  
+from employees w ,employees m  
+where w.mgr = m.empno;  
+1. employees表のdeptno列がnullの行を含めて表示する外部結合を行う以下  
+のSQL文はOKですか?NGの場合は修正してください  
+select e.empno, e.ename, d.deptno, d.dname  
+from employees e join departments d  
+on e.deptno = d.deptno;  
+1. employees表のdeptno列がnullの行を含めて表示する外部結合を行う以下  
+のSQL文はOKですか?NGの場合は修正してください  
+select e.empno, e.ename, d.deptno, d.dname  
+from employees e ,departments d  
+where e.deptno = d.deptno;  
+1. employees表のdeptno列がnullの行を含めて表示する、またdepartments表の  
+だれも配属されていない部門も表示する外部結合を行う以下のSQL文はOKですか?  
+NGの場合は修正してください  
+select e.empno, e.ename, d.deptno, d.dname  
+from employees e, depatments d  
+where e.deptno(+) = d.deptno(+);
+
 ## 12/18
 
 1. 以下のSQL文はOKですか?NGの場合は修正してください  
