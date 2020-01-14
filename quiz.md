@@ -1,5 +1,33 @@
 # Quiz
 
+## 01/14
+
+1. 今年の抱負を教えてください
+1. 以下のSQL文はOKですか?  
+NGの場合は修正してください  
+select empno, ename, job, mgr, deptno  
+from employees  
+where empno =  
+(select mgr from employees  
+where ename in ('山田', '伊藤'));
+1. mgr列がnullの行が含まれる場合、以下のSQL文はOKですか?     
+NGの場合は修正してください  
+select empno, ename  
+from employees
+where empno not in (select mgr from employees);
+1. 以下のSQL文を説明してください  
+select empno, ename, sal, deptno  
+from employees  
+where (sal, deptno) =  
+(select sal, deptno from employees  
+where empno = 1013);
+1. 以下のSQL文を説明してください  
+select empno, ename  
+from employees e  
+where not exists  
+(select * from orders o  
+where o.salesman_no = e.empno);
+
 ## 12/19
 
 1. mgr列がnullの行を含めて表示する外部結合を行う以下のSQL文はOKですか?  
