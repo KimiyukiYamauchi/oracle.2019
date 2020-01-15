@@ -6,15 +6,9 @@
 ``` sql
 select empno, ename  
 from employees e  
-where exists  
+where not exists  
 (select * from orders o  
 where o.salesman_no = e.empno);  
-```
-```sql
-select empno, ename 
-from employees e  
-where empno in  
-(select distinct salesman_no from orders);
 ```
 2. 以下と同等のSQL文を作成してください  
 ``` sql
