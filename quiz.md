@@ -3,16 +3,21 @@
 ## 01/15
 
 1. 以下と同等のSQL文を作成してください  
+``` sql
 select empno, ename  
 from employees e  
 where exists  
 (select * from orders o  
 where o.salesman_no = e.empno);  
+```
+```sql
 select empno, ename 
 from employees e  
 where empno in  
 (select distinct salesman_no from orders);
-1. 以下と同等のSQL文を作成してください  
+```
+2. 以下と同等のSQL文を作成してください  
+``` sql
 select es.deptno, es.ename, es.sal  
 from employees es
 where es.sal =  
@@ -20,6 +25,8 @@ where es.sal =
 where deptno = es.deptno)  
 and deptno in(20, 30)  
 order by deptno;  
+```
+``` sql
 select e.deptno, e.ename, e.sal  
 from employees e join  
 (select deptno, max(sal) ms  
@@ -27,6 +34,7 @@ from employees
 group by deptno) m  
 on e.deptno = m.deptno and e.sal = m.ms  
 where e.deptno in (20, 30);
+```
 
 ## 01/14
 
