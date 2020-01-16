@@ -1,5 +1,15 @@
 # Quiz
 
+## 01/16
+
+1. insert into dept_copy values((select 列名...))の形式で  
+以下の値を追加するSQL文
+    - deptno - 現在のdeptnoの最大値+10の値
+    - dname - システム開発部
+    - loc - null
+2. emp_copyのempnoが1010以降のsalを10,000増やすSQL文
+3. dept_copyのdeptnoでdepartments表にない行を削除するSQL文
+
 ## 01/15
 
 1. 以下と同等のSQL文を作成してください  
