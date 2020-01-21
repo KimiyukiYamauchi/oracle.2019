@@ -22,8 +22,8 @@
   7. commit;
   8. insert文(2)
   9. savepoint d;
-  10.rollback;
-  11.commit;
+  10. rollback;
+  11. commit;
 
 - 部門表に対して以下の手順でSQLを実行しました
   1. A: deptno = 10のloc 東京 -> 大阪
