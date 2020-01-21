@@ -1,5 +1,62 @@
 # Quiz
 
+## 01/21
+
+- 以下のSQL文を実行しました。どのDML文がcommitされますか
+  1. insert文(1)
+  2. savepoint a;
+  3. delete文(1)
+  4. savepoint b;
+  5. update文(1)
+  6. savepoint c;
+  7. rollback to b;
+  8. commit;
+
+- 以下のSQL文を実行しました。どのDML文がcommitされますか
+  1. insert文(1)
+  2. savepoint a;
+  3. delete文(1)
+  4. savepoint b;
+  5. update文(1)
+  6. savepoint c;
+  7. commit;
+  8. insert文(2)
+  9. savepoint d;
+  10.rollback;
+  11.commit;
+
+- 部門表に対して以下の手順でSQLを実行しました
+  1. A: deptno = 10のloc 東京 -> 大阪
+  2. A: commit
+  3. C: deptno = 10を検索
+  4. B: deptno = 20のloc 大手町 -> 新宿  
+  その後、以下のSQL文を実行、返す値はなんですか  
+  - B: select loc from 部門表 where deptno in(10, 20);
+  - C: select loc from 部門表 where deptno in(10, 20);
+
+- 部門表に対して以下の手順でSQLを実行しました
+  1. A: deptno = 10のloc 東京 -> 大阪
+  2. A: commit
+  3. C: deptno = 10を検索
+  4. B: deptno = 20のloc 大手町 -> 新宿
+  5. B: commit  
+  その後、以下のSQL文を実行、返す値はなんですか  
+  - B: select loc from 部門表 where deptno in(10, 20);
+  - C: select loc from 部門表 where deptno in(10, 20);
+
+- 部門表に対して以下の手順でSQLを実行しました
+  1. A: deptno = 60を検索(for update)
+  2. B: deptno = 60を検索(for update nowait)
+  3. C: deptno = 60を検索(通常の検索)
+  4. A: deptno = 60のloc 大阪 -> 沖縄
+  5. B: deptno = 60のloc 大阪 -> 青森
+  6. C: deptno = 60を検索(通常の検索)
+  7. A: commit
+  8. A: deptno = 60を検索(通常の検索)
+  9. B: deptno = 60を検索(通常の検索)
+  10. C: deptno = 60を検索(通常の検索)  
+  2, 3, 6, 8, 9, 10の検索の結果は何ですか
+
 ## 01/16
 
 1. insert into dept_copy values((select 列名...))の形式で  
