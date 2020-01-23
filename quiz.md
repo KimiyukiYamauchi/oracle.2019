@@ -1,5 +1,48 @@
 # Quiz
 
+## 01/23
+
+1. 以下のテーブルを作成するSQL文
+  - テーブル名(emp1)
+    - empno
+      - データ型
+        - 数値4桁
+      - 制約
+        - 制約名
+          - emp1_empno_pk
+          - 主キー
+    - ename
+      - データ型
+        - 文字10桁
+      - 制約
+        - 制約名
+          - emp1_ename_nn
+          - not null
+    - job
+      - データ型
+        - 文字20桁
+      - 制約
+        - 制約名
+          - なし
+          - not null
+    - deptno
+      - データ型
+        - 数値3桁
+      - 制約
+        - 制約名
+          - emp1_dept1_deptno_fk
+          - 外部キー
+            - dept1
+              - deptno
+        - 制約名
+          - emp1__deptno_nn
+          - not null
+    - job, deptno
+      - 制約
+        - 制約名
+          - emp1_deptno_job_uk
+          - 一意キー
+      
 ## 01/22
 
 1. 以下viewを作成するSQL文?
