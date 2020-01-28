@@ -1,5 +1,20 @@
 # Quiz
 
+## 01/28
+
+1. 以下のSQL文
+  - departments表をコピーしdept_copy表
+  - 但し、データはコピーしない
+  - deptnoにprimary key(主キー)
+1. 以下のSQL文
+  - 上記で作成したdept_copy表に以下の列追加
+  - 列名: manager_id
+    - 型: number(4)
+    - 外部キー(employees表のempno列)
+1. 以下のSQL文
+  - 上記で作成したdept_copy表に以下の列削除
+    - 列名: dname, loc
+
 ## 01/23
 
 1. 以下のテーブルを作成するSQL文
