@@ -1,5 +1,42 @@
 # Quiz
 
+## 01/29
+
+1. 第1正規形を第2正規形にするために何を行いますか?
+
+2. 以下のSQLはOKですか?NGなら修正してください
+
+``` sql
+select employee_id, last_name "LastName"
+from employees
+where department_id = 30
+union
+select emloyee_id EMP_NO, last_name
+from employees
+where department_id = 60
+order by 1, LastName;
+```
+
+3. 以下のSQLの実行結果はどうなりますか
+
+```
+employees表
+job_id    salary
+SA_MAN    14000
+SA_REP    11500
+SA_MAN    11000
+SA_REP    11000
+
+```
+
+``` sql
+select job_id, salary,
+case when salary >= 12000 and job_id = 'SA_MAN' then 'RANK A'
+when salary >= 10000 and job_id = 'SA_REP' then 'RANK A'
+else 'RANK B' end rank
+from employees;
+```
+
 ## 01/28
 
 1. 以下のSQL文
