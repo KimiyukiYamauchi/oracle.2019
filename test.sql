@@ -630,3 +630,13 @@ union all
 select job_id, department_id
 from employees
 where department_id = 20
+
+alter session set nls_date_language = 'AMERICAN';
+alter session set nls_date_language = 'JAPANESE';
+alter session set nls_date_format = 'DD-MON-RR';
+alter session set nls_date_format = 'RR-MM-DD';
+select constraint_name, constraint_type,
+column_name
+from user_constraints
+natural join user_cons_columns
+where table_name = '&table_name';
