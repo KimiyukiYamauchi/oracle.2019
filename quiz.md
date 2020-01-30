@@ -1,5 +1,63 @@
 # Quiz
 
+## 01/30
+
+1. 以下のSQLはOKですか?NGなら修正してください
+  - PRODUCTS表のQUANTITY列の大きい順に並べる
+  - 上位の10%の製品の情報を表示
+  - 同位の行はすべて表示
+``` sql
+select prod_id, prod_name, quantity
+from products
+fetch first 10 rows only
+order by quantity desc;
+```
+
+2. 以下のSQLはOKですか?NGなら修正してください
+  - 1回目の実行では、col1、col2、tableの入力が必要
+  - 2回目はcol1、col2の入力が必要
+``` sql
+select &col1, &col2
+from &table
+order by 1;
+```
+
+3. 以下のSQLの出力結果は
+
+```
+products表
+product_id   list_price     min_price
+1           100             120
+2           null            120
+3           100             null
+4           null            null
+```
+``` sql
+select prodoct_id, nvl2(nullif(list_price, min_price), 100, 0)
+from products;
+```
+, 
+4. 以下のSQLの出力結果は
+
+``` sql
+select round(round(1234.567, 2), 1)
+```
+
+5. 以下のSQLはOKですか?NGなら修正してください
+  - EMPLOYEES表から2番目に給与が低い社員の情報を表示する
+
+``` sql
+select employee_id, name
+from employees
+where employee_id in
+  (select employee_id
+  from employees
+  where salary = 
+    (select min(salary)
+    from employees
+    where salary <any (select salary from employees)))
+```
+
 ## 01/29
 
 1. 第1正規形を第2正規形にするために何を行いますか?
