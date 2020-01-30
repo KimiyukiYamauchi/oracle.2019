@@ -36,11 +36,11 @@ product_id   list_price     min_price
 select prodoct_id, nvl2(nullif(list_price, min_price), 100, 0)
 from products;
 ```
-, 
+
 4. 以下のSQLの出力結果は
 
 ``` sql
-select round(round(1234.567, 2), 1)
+select round(round(1234.567, 2), 1) from dual;
 ```
 
 5. 以下のSQLはOKですか?NGなら修正してください
