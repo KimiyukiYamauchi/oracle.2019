@@ -1,5 +1,35 @@
 # Quiz
 
+## 02/04
+
+1. 以下のSQLはOKですか?NGなら修正してください
+  - PRODUCTS表の単価の高い順に並べる
+  - 上位の11番目から10行分の製品を表示
+``` sql
+select prod_id, prod_name, unit_price
+from products
+order by unit_price desc
+offset 10 rows fetch 10 rows only;
+```
+
+2. 以下のSQLはOKですか?NGなら修正してください
+  - 各部門の職種の一覧表示
+``` sql
+select distinct department_id, job
+from employees
+order by department_id, job;
+```
+
+3. 以下のSQLはOKですか?NGなら修正してください
+  - 1999年1月1日から2000年12月31日までの間に入社した
+  - 職種は'SA_MAN'または'SE_MAN'
+``` sql
+select employee_id, last_name, job_id, hire_date
+from employees
+where job_id =any ('SA_MAN', 'SE_MAN') or
+hire_date between '99-01-01' and '00-12-31';
+```
+
 ## 01/30
 
 1. 以下のSQLはOKですか?NGなら修正してください
