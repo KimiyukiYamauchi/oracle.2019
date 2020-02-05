@@ -1,5 +1,39 @@
 # Quiz
 
+## 02/5
+
+1. 以下のSQLはOKですか?NGなら修正してください
+  - 顧客ごとの売上合計を売上が大きい順で表示
+  - その際、いくつかの選択条件を指定
+
+``` sql
+select c.customer_id, sum(o.order_total) "total"
+from customers c join orders o
+on c.customer_id = o.customer_id
+where c.customer_id > 150
+and order_total > 1000
+group by c.customer_id
+having sum(o.order_total) >- 30000
+order by total;
+```
+
+2. 以下のSQLはOKですか?NGなら修正してください
+  - 製品カテゴリごとに製品の一覧を1行で表示
+  - 表示する順番は価格の安い順
+  - 製品名の間は「:」で区切る
+  - カテゴリごとに最も安い製品の単価を表示
+
+``` sq
+select product_category "Product Category",
+listagg(product_name, ',') within group
+(order by unit_price) "Product List",
+min(unit_price) "Lowest"
+from products
+group by product_category order by "Product Category"
+```
+
+3. P514の問54を行うSQL文を書いてください
+
 ## 02/04
 
 1. 以下のSQLはOKですか?NGなら修正してください
