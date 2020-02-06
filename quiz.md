@@ -17,7 +17,7 @@ create table order_details (
   amount number(10,2) constraint amount_ck
     check (amount <= 1000),
   payment_mode varchar2(15)
-    check (payment_mode in('Credit', 'Cash))
+    check (payment_mode in('Credit', 'Cash'))
 );
 ```
 2. 以下のSQLはOKですか?NGなら修正してください
@@ -32,14 +32,11 @@ create table orders (
     constraint orders_order_id_pk primary key,
   order_date date not null default sysdate,
   customer_id number(6),
-  shipped_date,
+  shipped_date date,
   constraint orders_shipped_date_ck
     check(order_date > shipped_date)
 )
 ```
-
-3. 2/28(金)に試験を受けますか?
-
 
 ## 02/05
 
