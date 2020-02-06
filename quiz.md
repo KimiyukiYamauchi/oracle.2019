@@ -1,6 +1,47 @@
 # Quiz
 
-## 02/5
+## 02/06
+
+1. 以下のSQLはOKですか?NGなら修正してください
+  - ORDER_IDは主キー
+  - ORDER_DATEはNOT NULL、デフォルトは現在日時
+  - AMOUNTは1000円以上
+  - STATUSは「Shipped」または「Unshipped」のみ
+  - PAYMENT_MODEは「Credit」または「Cash」のみ
+
+``` sql
+create table order_details (
+  order_id number(2) 
+    constraint order_id_pk primary key,
+  order_date date not null default sydate,
+  amount number(10,2) constraint amount_ck
+    check (amount <= 1000),
+  payment_mode varchar2(15)
+    check (payment_mode in('Credit', 'Cash))
+);
+```
+2. 以下のSQLはOKですか?NGなら修正してください
+  - order_idは主キー
+  - order_dateはnot null、デフォルトは現在日時
+  - customer_diはnot null
+  - shipped_dateはorder_dateよりあと
+
+``` sql
+create table orders (
+  order_id number(8)
+    constraint orders_order_id_pk primary key,
+  order_date date not null default sysdate,
+  customer_id number(6),
+  shipped_date,
+  constraint orders_shipped_date_ck
+    check(order_date > shipped_date)
+)
+```
+
+3. 2/28(金)に試験を受けますか?
+
+
+## 02/05
 
 1. 以下のSQLはOKですか?NGなら修正してください
   - 顧客ごとの売上合計を売上が大きい順で表示
