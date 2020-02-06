@@ -13,7 +13,7 @@
 create table order_details (
   order_id number(2) 
     constraint order_id_pk primary key,
-  order_date date not null default sydate,
+  order_date date not null default sysdate,
   amount number(10,2) constraint amount_ck
     check (amount <= 1000),
   payment_mode varchar2(15)
