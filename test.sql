@@ -636,7 +636,12 @@ alter session set nls_date_language = 'JAPANESE';
 alter session set nls_date_format = 'DD-MON-RR';
 alter session set nls_date_format = 'RR-MM-DD';
 select constraint_name, constraint_type,
-column_name
+column_name, search_condition, r_constraint_name
 from user_constraints
 natural join user_cons_columns
-where table_name = '&table_name';
+where table_name = upper('&table_name');
+select index_name, index_type,
+column_name
+from user_indexes
+natural join user_ind_columns
+where table_name = upper('&table_name');
