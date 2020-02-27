@@ -46,12 +46,15 @@ where e.deptno(+) = d.deptno(+);
 ### 問9
 売上がない従業員の従業員番号と名前を取り出す  
 以下のSQL文はOKですか?  
-NGの場合は修正してください  
+NGの場合は修正してください
+
+``` sql
 select empno, ename  
 from employees e  
 where exists  
 (select * from orders o  
 where o.salesman_no = e.empno);
+```
 
 ### 問10
 以下と同等のSQL文を作成してください
